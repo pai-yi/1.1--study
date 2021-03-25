@@ -1,0 +1,78 @@
+1.Git 创建仓库:
+      C:\Users\兀一\Desktop\text-3.25>git init
+        Git 使用 git init 命令来初始化一个 Git 仓库，Git 的很多命令都需要在 Git 的仓库中运行，所以 git init 是使用 Git 的第一个命令。
+        在执行完成 git init 命令后，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变。
+
+
+
+2.配置:
+
+    git 的设置使用 git config 命令。
+    -- 显示当前的 git 配置信息：
+            C:\Users\兀一\Desktop\text-3.25> git config --list
+            credential.helper=osxkeychain
+            core.repositoryformatversion=0
+            core.filemode=true
+            core.bare=false
+            core.logallrefupdates=true
+            core.ignorecase=true
+            core.precomposeunicode=true
+
+
+    --编辑 git 配置文件:
+       C:\Users\兀一\Desktop\text-3.25> git config -e    # 针对当前仓库
+        或者：
+       C:\Users\兀一\Desktop\text-3.25> git config -e --global   # 针对系统上所有仓库
+
+    --设置提交代码时的用户信息：
+            C:\Users\兀一\Desktop\text-3.25> git config --global user.name "runoob"
+            C:\Users\兀一\Desktop\text-3.25> git config --global user.email test@runoob.com
+
+
+3.一个简单的操作步骤：
+        ps: C:\Users\兀一> git init    git init - 初始化仓库。
+
+        C:\Users\兀一\Desktop\text-3.25> git add .
+        C:\Users\兀一\Desktop\text-3.25> git commit
+        git status -状态
+        git add . - 添加文件到暂存区。
+        git commit - 将暂存区内容添加到仓库中。
+
+
+4.回退版本：
+    方法一：
+        C:\Users\兀一\Desktop\text-3.25> git log  日志
+        HEAD 表示当前最新版本
+        HEAD^ 表示当前最新版本的前一个版本，如果为两个^ 则前两个版本，以此类推。。。
+        C:\Users\兀一\Desktop\text-3.25> git reset --hard HEAD^
+        HEAD~1 表示当前最新版本的前一个版本
+        HEAD~10 表示当前最新版本的前十个版本，以此类推。。。
+        C:\Users\兀一\Desktop\text-3.25> git reflog  完整日志
+
+    方法二(版本较多):
+        通过每个版本的版本号回退到指定版本
+        C:\Users\兀一\Desktop\text-3.25> git reflog   获得各个版本号信息
+        C:\Users\兀一\Desktop\text-3.25> git reset --hard 版本号
+
+
+5.远程仓库
+        把Github远程仓库中的数据 克隆（复制）到本地
+        C:\Users\兀一\Desktop> git clone C:\Users\兀一\Desktop\text-3.25> git reflog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
